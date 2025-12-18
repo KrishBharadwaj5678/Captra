@@ -52,7 +52,7 @@ Captra is a modern web application that allows users to **capture images using t
 
 ---
 
-## 🤝 Contributing 
+##  Contributing 🤝
 
 Want to contribute? Here's how:
 
