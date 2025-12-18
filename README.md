@@ -2,6 +2,8 @@
 
 Captra is a modern web application that allows users to **capture images using their webcam** with advanced controls.
 
+---
+
 ## Features ✨
 
 | Feature                  | Description                                                |
