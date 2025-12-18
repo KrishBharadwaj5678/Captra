@@ -13,6 +13,7 @@ import "../index.css";
 
 export const Home = () => {
   let videoRef = useRef(null);
+  let streamRef = useRef(null);
   let canvasRef = useRef(null);
   let [isCaptured, setIsCaptured] = useState(false); // used to toggle post-capture UI i.e download and back buttons
   let [imgData, setImgData] = useState(null);
@@ -33,14 +34,22 @@ export const Home = () => {
   );
   let [facingMode, setFacingMode] = useState("user"); // "user" = front, "environment" = back
 
-  let setup = () => {
-    navigator.mediaDevices
-      .getUserMedia({
+  let setup = async () => {
+    try {
+      // Stop previous stream
+      if (streamRef.current) {
+        streamRef.current.getTracks().forEach((track) => track.stop());
+      }
+
+      // Request new stream
+      let stream = await navigator.mediaDevices.getUserMedia({
         video: { facingMode },
-      })
-      .then((stream) => {
-        videoRef.current.srcObject = stream;
       });
+      streamRef.current = stream;
+      videoRef.current.srcObject = stream;
+    } catch (error) {
+      console.log("Error: ", error);
+    }
   };
 
   let switchCamera = () => {
@@ -111,10 +120,14 @@ export const Home = () => {
 
   useEffect(() => {
     setup();
+  }, [facingMode]); // run this effect when the component loads and every time facingMode changes
 
-    setTimeout(() => {
+  useEffect(() => {
+    let timer = setTimeout(() => {
       setHideUIButtons(true); // Show UI buttons when the page is refreshed
     }, 600);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -136,7 +149,7 @@ export const Home = () => {
         </div>
       </div>
 
-      <div className="w-5.5/8 h-full relative rounded-xl overflow-hidden">
+      <div className="w-5.5/8 h-11/12 md:h-full relative rounded-xl overflow-hidden">
         <video
           autoPlay
           id="video"

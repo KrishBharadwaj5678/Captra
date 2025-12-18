@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: "Number";
-  src: url("../public/fonts/number.otf");
+  src: url("../fonts/number.otf");
 }
 
 .countdown {

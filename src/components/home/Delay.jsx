@@ -14,9 +14,13 @@ const Delay = ({
       onMouseEnter={() => setDelayDropdownUI(true)}
       onMouseLeave={() => setDelayDropdownUI(false)}
     >
-      <button className="rounded-md! bg-[#3498FF]/95  flex gap-1.5 items-center cursor-pointer px-3 py-2.5 mb-1!">
+      <button className="rounded-md! bg-[#3498FF]/95 flex gap-1.5 items-center cursor-pointer px-3 py-2.5 mb-1!">
         <p className="text-white">{delayValue}s Delay</p>
-        <FaChevronDown className="text-white" />
+        <FaChevronDown
+          className={`text-white transition-t  duration-300 ${
+            delayDropdownUI ? "rotate-180" : ""
+          }`}
+        />
       </button>
 
       <AnimatePresence>
