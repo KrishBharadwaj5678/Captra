@@ -67,6 +67,7 @@ const FiltersMenu = ({ filterNames, filters, setFilters }) => {
                   <Slider
                     progress
                     defaultValue={filter.default}
+                    value={filters[filter.name]}
                     min={filter.min}
                     max={filter.max}
                     onChange={(value) =>
@@ -75,7 +76,6 @@ const FiltersMenu = ({ filterNames, filters, setFilters }) => {
                         [filter.name]: value,
                       }))
                     }
-                    className="custom-slider-modern"
                   />
                 </motion.li>
               ))}
