@@ -1,10 +1,10 @@
-# Captra 🎥
+# 🎥 Captra 
 
 Captra is a modern web application that allows users to **capture images using their webcam** with advanced controls.
 
 ![Captra](https://github.com/KrishBharadwaj5678/Captra/raw/main/Captra_Demo.png)
 
-## Features ✨
+## ✨ Features 
 
 | Feature                  | Description                                                |
 | ------------------------ | ---------------------------------------------------------- |
@@ -17,7 +17,7 @@ Captra is a modern web application that allows users to **capture images using t
 
 ---
 
-## Tech Stack 🛠️
+## 🛠️ Tech Stack 
 
 | Technology                        | Purpose                       |
 | --------------------------------- | ----------------------------- |
@@ -29,14 +29,19 @@ Captra is a modern web application that allows users to **capture images using t
 
 ---
 
-## Installation 💻
+## 💻 Installation 
 
 1. Clone the repository:
 
     ```bash
     git clone https://github.com/KrishBharadwaj5678/Captra.git
-    cd Captra
     ```
+
+2. Navigate to folder:
+
+   ```bash
+   cd Captra
+   ```
 
 2. Install dependencies:
 
