@@ -31,28 +31,28 @@ Captra is a modern web application that allows users to **capture images using t
 
 ## 💻 Installation 
 
-1. Clone the repository:
+### 1️⃣ Clone the repository:
 
-    ```bash
-    git clone https://github.com/KrishBharadwaj5678/Captra.git
-    ```
+```bash
+git clone https://github.com/KrishBharadwaj5678/Captra.git
+```
 
-2. Navigate to folder:
+### 2️⃣ Navigate to the folder:
 
-   ```bash
-   cd Captra
-   ```
+```bash
+cd Captra
+```
 
-2. Install dependencies:
+### 3️⃣ Install dependencies:
 
-    ```bash
-    npm install
-    ```
+```bash
+npm install
+```
 
-3. Start the development server:
+### 4️⃣ Start the development server:
 
-    ```bash
-    npm run dev
-    ```
+```bash
+npm run dev
+```
 
-4. Open the app in your browser.
+### 5️⃣ Open the app in your browser.
