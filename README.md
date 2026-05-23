@@ -1,3 +1,5 @@
+[English](README.md) | [Português](README.pt.md) | [日本語](README.ja.md) | [Русский](README.ru.md)
+
 # 🎥 Captra 
 
 Captra is a modern web application that allows users to **capture images using their webcam** with advanced controls.
